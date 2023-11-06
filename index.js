@@ -1,7 +1,15 @@
-import fullName from "./fullName.js";
+import express from "express";
 
-const result = fullName("sagar","ghimire");
+const app = express()
 
-console.log(result)
+app.get("/",(req,res)=>{
+    res.send("hi")
+})
+app.get("/hi",(req,res)=>{
+    res.send("hloo")
+})
 
 
+app.listen(8080,()=>{
+    console.log("server is running on 8080")
+})
